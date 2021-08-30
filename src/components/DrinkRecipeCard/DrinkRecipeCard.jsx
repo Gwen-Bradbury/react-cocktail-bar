@@ -7,7 +7,7 @@ const DrinkRecipeCard = ({drink}) => {
     return (
         <div className={Styles.main}>
             <img className={Styles.img} src={drink.strDrinkThumb} />
-            <a href={`/#/recipe/${drink.idDrink}`}>
+            <a href={`/react-cocktail-bar/#/recipe/${drink.idDrink}`}>
                 <div className={Styles.title}>{drink.strDrink}</div>
             </a>
         </div>
