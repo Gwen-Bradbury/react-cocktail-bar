@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import React, {useState} from 'react'
 import './App.css';
+import DrinkRecipeCard from './components/DrinkRecipeCard/DrinkRecipeCard';
+import IngredientPicker from './components/IngredientsPicker/IngredientPicker';
+import RecipeGetter from './components/RecipeGetter/RecipeGetter';
 
 function App() {
+  const [pickedIngredient, setPickedIngredient] = useState(null)
+  const [recipes, setRecipes] = useState([])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <IngredientPicker pickIngredient = {setPickedIngredient} />
+      <RecipeGetter ingredient = {pickedIngredient} storeRecipes = {setRecipes} />
+      <div className='drink-grid'>
+        {recipes.map(recipe => (
+          <DrinkRecipeCard drink = {recipe}/>
+        ))}
+      </div>
     </div>
   );
 }
