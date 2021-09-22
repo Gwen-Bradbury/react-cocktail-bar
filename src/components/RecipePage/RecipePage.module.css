@@ -14,3 +14,15 @@
 .title {
     font-size: 20px;
 }
+
+/* Media Queries */
+@media (max-width: 991px) {
+    .main {
+        font-size: 0.5rem;
+    }
+
+    .title {
+        font-size: 0.5rem;
+        text-decoration: underline;
+    }
+}
