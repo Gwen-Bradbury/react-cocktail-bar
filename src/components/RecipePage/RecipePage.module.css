@@ -1,0 +1,16 @@
+.main {
+    width: 23%;
+    overflow: hidden;
+    padding: 10px;
+    border: 1px solid black;
+    margin: 1%;
+}
+
+.img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.title {
+    font-size: 20px;
+}

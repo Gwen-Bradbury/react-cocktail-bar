@@ -1,6 +1,7 @@
 import React, {useState, useEffect, Fragment} from 'react'
 import { getData } from '../../scripts/NetworkFunctions'
 import { useParams } from 'react-router-dom'
+import Styles from './RecipePage.module.css';
 
 const RecipePage = () => {
     const [recipe, setRecipe] = useState(null)
@@ -10,11 +11,11 @@ const RecipePage = () => {
         getData(requestType).then(res => setRecipe(res.drinks[0]))
     }, [])
     return (
-        <div>
+        <div className={Styles.main}>
             {recipe ? 
                 <Fragment>
-                    <img src={recipe.strDrinkThumb} />
-                    <div>{recipe.strDrink}</div>
+                    <img className={Styles.img} src={recipe.strDrinkThumb} />
+                    <div className={Styles.title}>{recipe.strDrink}</div>
                     {recipe.strIngredient1 ?
                     <div>
                         {recipe.strIngredient1} : {recipe.strMeasure1}
