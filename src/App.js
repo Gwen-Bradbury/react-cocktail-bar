@@ -8,13 +8,17 @@ function App() {
   const [pickedIngredient, setPickedIngredient] = useState(null)
   const [recipes, setRecipes] = useState([])
   return (
-    <div className="App">
-      <IngredientPicker pickIngredient = {setPickedIngredient} />
-      <RecipeGetter ingredient = {pickedIngredient} storeRecipes = {setRecipes} />
-      <div className='drink-grid'>
-        {recipes.map(recipe => (
-          <DrinkRecipeCard drink = {recipe}/>
-        ))}
+    <div className="container">
+      <div className="App">
+        <div className ="Picker">
+          <IngredientPicker pickIngredient = {setPickedIngredient} />
+          <RecipeGetter ingredient = {pickedIngredient} storeRecipes = {setRecipes} />
+        </div>
+        <div className='drink-grid'>
+          {recipes.map(recipe => (
+            <DrinkRecipeCard drink = {recipe}/>
+          ))}
+        </div>
       </div>
     </div>
   );

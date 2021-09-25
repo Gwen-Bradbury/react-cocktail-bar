@@ -2,7 +2,7 @@
     width: 23%;
     overflow: hidden;
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid #fff;
     margin: 1%;
 }
 
@@ -13,6 +13,8 @@
 
 .title {
     font-size: 20px;
+    background-color: #541766;
+    color: #fff;
 }
 
 /* Media Queries */

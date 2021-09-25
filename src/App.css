@@ -1,5 +1,24 @@
+body {
+  background-color: #000;
+  color: #fff;
+} 
+
 .App {
   text-align: center;
+  background: url('./components/Assets/Images/cocktail-background.jpg') no-repeat center center;
+  background-size: cover;
+  height: inherit;
+  width: 100%; 
+  position: absolute;
+}
+
+.container {
+  height: 100%;
+  text-align: center;
+}
+
+.Picker {
+  
 }
 
 .drink-grid {
