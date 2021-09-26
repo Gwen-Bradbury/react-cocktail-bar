@@ -18,7 +18,13 @@ body {
 }
 
 .Picker {
-  
+  height: 30px;
+  margin: 30px;
+  margin-bottom: 10px;
+}
+
+.Picker-button {
+  margin-bottom: 10px;
 }
 
 .drink-grid {

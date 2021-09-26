@@ -12,6 +12,8 @@ function App() {
       <div className="App">
         <div className ="Picker">
           <IngredientPicker pickIngredient = {setPickedIngredient} />
+        </div>
+        <div className ="Picker-button">
           <RecipeGetter ingredient = {pickedIngredient} storeRecipes = {setRecipes} />
         </div>
         <div className='drink-grid'>
